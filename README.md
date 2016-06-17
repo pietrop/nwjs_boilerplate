@@ -91,7 +91,7 @@ You may want to have a look at [NWJS contexts](http://docs.nwjs.io/en/latest/For
 
 ## `index.html`
 Contains the nwjs "view" of the application. [Check it out](./index.html)
-And has code for menu, and keyboards shortcut. Commented out ready for use.
+It has code for menu, and keyboards shortcut. Commented out ready for use.
 
 ## `main.js`
 Optional if you want to run a node process in background. [more on this here](http://docs.nwjs.io/en/latest/References/Manifest%20Format/#node-main).
