@@ -1,6 +1,6 @@
 # NWJS Boilerplate
 
-With Bootstrap 3 and JQuery.
+A simple NWJS boilerplate to get started prototyping apps for os x with node. jQuery and Bootstrap 3.
 
 ## Getting started.
 - [Install nwjs](http://nwjs.io/) if you haven't got it already.
