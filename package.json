@@ -1,0 +1,35 @@
+{
+  "name": "nwjs_boilerplate",
+  "version": "1.0.0",
+  "description": "a sample template to get started with nwjs applications",
+  "main": "index.html",
+  "node-main": "main.js",
+  "window": {
+    "show": true,
+    "frame": true,
+    "toolbar": true,
+    "always_on_top": true,
+    "fullscreen": false,
+    "show_in_taskbar": true,
+    "transparent": false,
+    "icon": "app.icns",
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 800,
+    "max_height": 600
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nw",
+    "build": "node deploy.js",
+    "testing": "echo hello"
+  },
+  "author": "Pietro Passarelli <pietro.passarelli@gmail.com> (http://pietropassarelli.com)",
+  "license": "ISC",
+  "dependencies": {
+    "nw-builder": "^2.2.0"
+  }
+}

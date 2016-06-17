@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template App</title>
+  <link rel="stylesheet" href="vendor/bootstrap-3.3.6-dist/css/bootstrap.css"></link>
+</head>
+<body>
+
+  <script type="text/javascript">
+  //http://docs.nwjs.io/en/latest/
+  //https://github.com/nwjs/nw.js/wiki
+
+  //manifest format
+  //http://docs.nwjs.io/en/latest/References/Manifest%20Format/#manifest-format
+
+  // NWJS contexts http://docs.nwjs.io/en/latest/For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/
+
+
+
+  /**
+  * MENU BAR
+  * http://docs.nwjs.io/en/latest/References/Menu/
+  */
+
+  // Load native UI library
+  var gui = require('nw.gui');
+
+  // Create menu
+  var menu = new gui.Menu({ type: 'menubar' });
+
+  //Default mac menu bar comands + copy, cut, paste
+  menu.createMacBuiltin('My App Name');
+  //TODO: The first item of application menu shows nwjs instead of your-app-name. To fix it, you need to set the value of CFBundleName in all files of nwjs.app/Contents/Resources/*.lproj/InfoPlist.strings to your-app-name instead of nwjs.
+
+  // // uncomment this to create menu bar items
+  // // Create sub-menu
+  // var menuItems = new gui.Menu();
+  //
+  // menuItems.append(new gui.MenuItem({
+  //   label: 'New',
+  //   click: function() {
+  //       alert("New File Demo");
+  //       //or call a function from here.
+  //     }
+  // }));
+  //
+  // menuItems.append(new gui.MenuItem({
+  //   label: 'Open',
+  //   click: function() {
+  //       alert("Open File Demo");
+  //       //or call a function from here.
+  //     }
+  // }));
+  //
+  // // Append MenuItem as a Submenu
+  // menu.append(
+  //     new gui.MenuItem({
+  //         label: 'File',
+  //         submenu: menuItems // menu elements from menuItems object
+  //     })
+  // );
+
+  // Append Menu to Window
+  gui.Window.get().menu = menu;
+
+
+  /**
+  * SHORTCUTS
+  *  http://docs.nwjs.io/en/latest/References/Shortcut/
+  * use `Ctrl` for `cmd` on mac.
+  */
+
+
+  var option = {
+    key : "Ctrl+Shift+A",
+    active : function() {
+      alert("Global desktop keyboard shortcut: " + this.key + " active.");
+      //Function you want to trigger
+    },
+    failed : function(msg) {
+      // :(, fail to register the |key| or couldn't parse the |key|.
+      //alert message keyboard shortcut didn't work
+      alert(msg);
+    }
+  };
+
+  // Create a shortcut with |option|.
+  var shortcut = new gui.Shortcut(option);
+
+  // Register global desktop shortcut, which can work without focus.
+  gui.App.registerGlobalHotKey(shortcut);
+
+
+  </script>
+
+  <div class="container-fluid">
+    <h1> Test 1</h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        Test 2
+      </div><!--col -->
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        Test 3
+      </div><!--col -->
+    </div><!--row -->
+  </div><!-- container-fluid -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/bootstrap-3.3.6-dist/js/bootstrap.js" charset="utf-8"></script>
+
+</body>
+</html>
