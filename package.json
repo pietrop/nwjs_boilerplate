@@ -30,7 +30,9 @@
   "author": "Pietro Passarelli <pietro.passarelli@gmail.com> (http://pietropassarelli.com)",
   "license": "ISC",
   "dependencies": {
-    "nw": "^0.15.2",
     "nw-builder": "^2.2.0"
-  }
+  },
+  "devDependencies": {
+  
+ }
 }

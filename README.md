@@ -7,6 +7,14 @@ A simple NWJS boilerplate to get started prototyping apps for os x with node. jQ
 - Install dependencies `npm install`
 - `npm star` to kick start the app.
 
+If you don't want to install nwjs globally on your system you can try and add this to `package.json` as a dev dependency and see how if it works.
+
+```javascript
+"devDependencies": {
+  "nw": "^0.15.2"
+}
+```
+
 ## How to use it
 At is simplest, go into `index.html` make a script tag, write your javascript in there, and require any node module you need (after having npm installed them locally)
 
@@ -103,7 +111,7 @@ Contains Bootstrap and JQuery.
 
 ## Deploy
 
-Use deploy script `deploy.js` by running folloring comand from root of app.
+Use deploy script `deploy.js` by running following comand from root of app.
 
 ```
 npm run build
@@ -116,6 +124,12 @@ This creates a build folder inside the repo. The build folder is also in `.gitig
 Also note that
 
 >The first item of application menu shows nwjs instead of your-app-name. To fix it, you need to set the value of CFBundleName in all files of `nwjs.app/Contents/Resources/*.lproj/InfoPlist.strings` to `your-app-name` instead of nwjs.
+
+Before running the deploy script you may also want to change toolbar show option to false. I have it on by default because is useful for troubleshooting during development.
+
+```json
+"toolbar": false,
+```
 
 
 ## Other
