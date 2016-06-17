@@ -84,6 +84,7 @@ With Bootstrap 3 and JQuery.
 
 ## `index.html`
 Contains the nwjs "view" of the application. [Check it out](./index.html)
+And has code for menu, and keyboards shortcut. Commented out ready for use.
 
 ## `main.js`
 Optional if you want to run a node process in background. [more on this here](http://docs.nwjs.io/en/latest/References/Manifest%20Format/#node-main).
@@ -104,3 +105,11 @@ npm run build
 This creates a build folder inside the repo. The build folder is also in `.gitignore` to avoid accidentally pushing it to remote.
 
 [documentation on deployment](http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/)
+
+
+## Other
+
+- [NWJS documentaiton](http://docs.nwjs.io/en/latest/)
+- [older documentation/wiki](https://github.com/nwjs/nw.js/wiki)
+- [manifest format](http://docs.nwjs.io/en/latest/References/Manifest%20Format/#manifest-format)
+- [NWJS contexts](http://docs.nwjs.io/en/latest/For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/)

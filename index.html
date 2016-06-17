@@ -10,15 +10,6 @@
 <body>
 
   <script type="text/javascript">
-  //http://docs.nwjs.io/en/latest/
-  //https://github.com/nwjs/nw.js/wiki
-
-  //manifest format
-  //http://docs.nwjs.io/en/latest/References/Manifest%20Format/#manifest-format
-
-  // NWJS contexts http://docs.nwjs.io/en/latest/For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/
-
-
 
   /**
   * MENU BAR
@@ -73,22 +64,21 @@
   * use `Ctrl` for `cmd` on mac.
   */
 
+  // var option = {
+  //   key : "Ctrl+Shift+A",
+  //   active : function() {
+  //     alert("Global desktop keyboard shortcut: " + this.key + " active.");
+  //     //Function you want to trigger
+  //   },
+  //   failed : function(msg) {
+  //     // :(, fail to register the |key| or couldn't parse the |key|.
+  //     //alert message keyboard shortcut didn't work
+  //     alert(msg);
+  //   }
+  // };
 
-  var option = {
-    key : "Ctrl+Shift+A",
-    active : function() {
-      alert("Global desktop keyboard shortcut: " + this.key + " active.");
-      //Function you want to trigger
-    },
-    failed : function(msg) {
-      // :(, fail to register the |key| or couldn't parse the |key|.
-      //alert message keyboard shortcut didn't work
-      alert(msg);
-    }
-  };
-
-  // Create a shortcut with |option|.
-  var shortcut = new gui.Shortcut(option);
+  // //Create a shortcut with |option|.
+  // var shortcut = new gui.Shortcut(option);
 
   // Register global desktop shortcut, which can work without focus.
   gui.App.registerGlobalHotKey(shortcut);
