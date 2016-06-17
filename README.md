@@ -113,6 +113,10 @@ This creates a build folder inside the repo. The build folder is also in `.gitig
 
 [documentation on deployment](http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/)
 
+Also note that
+
+>The first item of application menu shows nwjs instead of your-app-name. To fix it, you need to set the value of CFBundleName in all files of `nwjs.app/Contents/Resources/*.lproj/InfoPlist.strings` to `your-app-name` instead of nwjs.
+
 
 ## Other
 
