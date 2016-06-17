@@ -7,6 +7,13 @@ With Bootstrap 3 and JQuery.
 - Install dependencies `npm install`
 - `npm star` to kick start the app.
 
+## How to use it
+At is simplest, go into `index.html` make a script tag, write your javascript in there, and require any node module you need (after having npm installed them locally)
+
+Check out the [NWJS documentaiton](http://docs.nwjs.io/en/latest/) for more on how to do things with NWJS.
+
+You may want to have a look at [NWJS contexts](http://docs.nwjs.io/en/latest/For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/) for a better understanding of the thin line between the dom and node in NWJS.
+
 ## Overview
 
 ```
