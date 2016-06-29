@@ -4,6 +4,7 @@
   "description": "a sample template to get started with nwjs applications",
   "main": "index.html",
   "node-main": "main.js",
+  "dom_storage_quota": 5,
   "window": {
     "show": true,
     "frame": true,
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nw",
+    "start": "nw --remote-debugging-port=9222",
     "build": "node deploy.js",
     "testing": "echo hello"
   },
@@ -33,6 +34,6 @@
     "nw-builder": "^2.2.0"
   },
   "devDependencies": {
-  
+
  }
 }

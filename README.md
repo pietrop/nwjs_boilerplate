@@ -66,6 +66,7 @@ You may want to have a look at [NWJS contexts](http://docs.nwjs.io/en/latest/For
   "description": "a sample Boilerplate to get started with nwjs applications",
   "main": "index.html",
   "node-main": "main.js",
+  "dom_storage_quota": 5,
   "window": {
     "show": true,
     "frame": true,
@@ -96,6 +97,8 @@ You may want to have a look at [NWJS contexts](http://docs.nwjs.io/en/latest/For
   }
 }
 ```
+
+[`"dom_storage_quota"`](http://docs.nwjs.io/en/latest/References/Manifest%20Format/#dom_storage_quota) is the size of local storage you have access to within NWJS. meausered in MB by default in browsers is a round 5mb.
 
 ## `index.html`
 Contains the nwjs "view" of the application. [Check it out](./index.html)
@@ -131,6 +134,16 @@ Before running the deploy script you may also want to change toolbar show option
 "toolbar": false,
 ```
 
+## Debugging
+
+by default I've added `nw --remote-debugging-port=9222` in the `package.json` `start` script, for easy debugging.
+
+[checkout the documentation for more on this](http://docs.nwjs.io/en/latest/For%20Users/Debugging%20with%20DevTools/)
+
+To disabled this change start script to `nw` only.
+
+
+to use it run the app with `npm start` and visit [http://localhost:9222/](http://localhost:9222/) there you can chose the app you are currently working on, and it will show you the inspector in the browser.
 
 ## Other
 
@@ -138,3 +151,4 @@ Before running the deploy script you may also want to change toolbar show option
 - [older documentation/wiki](https://github.com/nwjs/nw.js/wiki)
 - [manifest format](http://docs.nwjs.io/en/latest/References/Manifest%20Format/#manifest-format)
 - [NWJS contexts](http://docs.nwjs.io/en/latest/For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/)
+- [Sample NWJS Apps](https://github.com/zcbenz/nw-sample-apps)
