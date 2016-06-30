@@ -4,6 +4,7 @@
   "description": "a sample template to get started with nwjs applications",
   "main": "index.html",
   "node-main": "main.js",
+  "chromium-args": "--mixed-context",
   "dom_storage_quota": 5,
   "window": {
     "show": true,
