@@ -152,7 +152,9 @@ After considering [a bunch of different options](https://gist.github.com/brannem
 
 Decided to go for the [app-module-path](https://www.npmjs.com/package/app-module-path) as it seemed to be the most straightforward.
 
-To use it in nwjs you need to do a little tweak due to the [difference in js context between node and webkit, install it](https://github.com/nwjs/nw.js/wiki/Differences-of-JavaScript-contexts).
+To use it in nwjs you need to do a little tweak due to the [difference in js context between node and webkit](http://docs.nwjs.io/en/latest/For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/#contexts-in-nwjs).
+
+but first run
 
 ```
 npm install app-module-path --save
