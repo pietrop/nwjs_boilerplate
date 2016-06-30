@@ -145,6 +145,41 @@ To disabled this change start script to `nw` only.
 
 to use it run the app with `npm start` and visit [http://localhost:9222/](http://localhost:9222/) there you can chose the app you are currently working on, and it will show you the inspector in the browser.
 
+
+## local modules path
+
+After considering [a bunch of different options](https://gist.github.com/branneman/8048520)
+
+Decided to go for the [app-module-path](https://www.npmjs.com/package/app-module-path) as it seemed to be the most straightforward.
+
+To use it in nwjs you need to do a little tweak due to the [difference in js context between node and webkit, install it](https://github.com/nwjs/nw.js/wiki/Differences-of-JavaScript-contexts).
+
+```
+npm install app-module-path --save
+```
+
+in `index.html` instead of using the recomended `__dirname`  
+
+```js
+require('app-module-path').addPath(__dirname);
+```
+
+replace that with `"."`
+
+
+```js
+require('app-module-path').addPath(".");
+```
+and it will work as normal.
+
+eg a module deep in the folder structure, can require another model just using the path from the root of the application, rather then having to work out some relative path that gets very confusing very quickly..
+
+```js
+var Transcription = require('app/models/transcription');
+```
+
+I did not put this in the `package.json` coz different people/projects have different ways of doing(or not doing) this. But now you know how to add it if you wish to use it.
+
 ## Other
 
 - [NWJS documentaiton](http://docs.nwjs.io/en/latest/)
